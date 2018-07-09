@@ -4,5 +4,10 @@ public class PlayTicTacToeCLI {
         TicTacToe game = new TicTacToe();
 
         game.printBoard();
+        System.out.println();
+        game.checkWin();
+        System.out.println(game.getWinCheck());
+        System.out.println();
+        System.out.println(game.getWinner());
     }
 }
