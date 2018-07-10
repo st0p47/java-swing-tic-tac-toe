@@ -4,7 +4,7 @@ public class TicTacToe {
     private int winner;
 
     public TicTacToe () {
-        board = new int[][] {{0 , 0 , 0},{0 , 2 , 0},{0 , 0 , 0}};
+        board = new int[][] {{0 , 0 , 0},{0 , 0 , 0},{0 , 0 , 0}};
         winner = 0;
     }
 
@@ -42,7 +42,9 @@ public class TicTacToe {
         }
     }
     public void makeAMove (int x, int y, int z) {
-        board[x][y] = z;
+        if (board[x][y] == 0) {
+            board[x][y] = z;
+        }
     }
     public void checkWin () {
         for (int i = 0; i < 3; i++) {
