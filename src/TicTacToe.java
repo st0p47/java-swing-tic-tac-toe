@@ -4,8 +4,14 @@ public class TicTacToe {
     private int winner;
 
     public TicTacToe () {
-        board = new int[][] {{0 , 0 , 0},{0 , 0 , 0},{0 , 0 , 0}};
+        board = new int[][] {{0 , 0 , 0},
+                                            {0 , 0 , 0},
+                                            {0 , 0 , 0}};
         winner = 0;
+    }
+
+    public int[][] getBoard() {
+        return board;
     }
 
     public int getWinner() {
