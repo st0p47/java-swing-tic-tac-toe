@@ -227,7 +227,9 @@ public class TicTacToeBot {
             moveCoords[1] = openSpaces[choose][1];
             madeMove = true;
         }
-
+         if (!madeMove) {
+             System.out.println("avootu akbar");
+         }
         return moveCoords;
     }
 }
