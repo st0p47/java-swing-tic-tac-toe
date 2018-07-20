@@ -5,8 +5,8 @@ public class TicTacToe {
 
     public TicTacToe () {
         board = new int[][] {{0 , 0 , 0},
-                                            {0 , 0 , 0},
-                                            {0 , 0 , 0}};
+                             {0 , 0 , 0},
+                             {0 , 0 , 0}};
         winner = 0;
     }
 
@@ -20,6 +20,29 @@ public class TicTacToe {
 
     public String getWinCheck() {
         return winCheck;
+    }
+
+    public int[][] getOpenSpaces() {
+        int openSpaceCounter = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == 0) {
+                    openSpaceCounter++;
+                }
+            }
+        }
+        int [] [] openSpaces = new int[openSpaceCounter][2];
+        int count = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == 0) {
+                    openSpaces[count][0] = i;
+                    openSpaces[count][1] = j;
+                    count++;
+                }
+            }
+        }
+        return openSpaces;
     }
 
     public void printBoard () {
