@@ -44,6 +44,17 @@ public class TicTacToe {
         }
         return openSpaces;
     }
+    public int getOpenSpaceCounter() {
+        int openSpaceCounter = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == 0) {
+                    openSpaceCounter++;
+                }
+            }
+        }
+        return openSpaceCounter;
+    }
 
     public void printBoard () {
         for (int i = 0; i < 3; i++) {
@@ -125,6 +136,9 @@ public class TicTacToe {
         if (winCheck.equals("0222")) {
             winner = 2;
         }
+        else if (getOpenSpaceCounter() == 0) {
+            winner = 3;
+        }
     }
     public void clearBoard () {
         for (int i = 0; i < 3; i++) {
@@ -132,6 +146,7 @@ public class TicTacToe {
                 board[i][j] = 0;
             }
         }
+        winner = 0;
     }
 
 }

@@ -11,6 +11,7 @@ public class PlayTicTacToe {
                 game.createAndShowGUI();
             }
         });
+        game.playGame();
 
     }
 }
