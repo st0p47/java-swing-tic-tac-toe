@@ -8,3 +8,4 @@ GUI Tic Tac Toe using the Java Swing toolkit
 - Add comments
 
 THIS IS A WIP PLEASE DON'T JUDGE
+also im bad
